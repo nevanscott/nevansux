@@ -1,6 +1,5 @@
 ---
 title: Nevan’s UX Website
-message: OMG, this fucking puppet is a beautiful crawler!
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +12,9 @@ message: OMG, this fucking puppet is a beautiful crawler!
 </head>
 <body>
 	<div id="content">
-		<h1>{{ page.message }}</h1>
+		<h1 id="quote">{{ site.data.quotes[0] }}</h1>
 	</div>
+	<script src="{{ site.baseurl }}/main.js"></script>
 </body>
 </html>
 
