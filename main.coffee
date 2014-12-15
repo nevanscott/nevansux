@@ -14,7 +14,6 @@ quotes = {{ site.data.quotes | jsonify }}
 active = ''
 
 randomize = () ->
-	console.log quotes[0], active
 	while quotes[0] == active
 		quotes = shuffle(quotes)
 	quote = quotes[0]
