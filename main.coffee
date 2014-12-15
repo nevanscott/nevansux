@@ -10,7 +10,7 @@ shuffle = (a) ->
   a
 
 quotes = {{ site.data.quotes | jsonify }}
-
+quotes = shuffle(quotes)
 active = ''
 
 randomize = () ->
