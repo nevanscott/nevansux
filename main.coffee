@@ -11,8 +11,16 @@ shuffle = (a) ->
 
 quotes = {{ site.data.quotes | jsonify }}
 
-quotes = shuffle(quotes)
+active = ''
 
-quote = quotes[0]
+randomize = () ->
+	console.log quotes[0], active
+	while quotes[0] == active
+		quotes = shuffle(quotes)
+	quote = quotes[0]
+	active = quote
+	document.getElementById('quote').innerHTML = quote;
+	
+randomize()
 
-document.getElementById('quote').innerHTML = quote;
+document.getElementsByTagName('body')[0].onclick = randomize
