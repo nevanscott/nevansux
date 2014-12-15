@@ -23,4 +23,4 @@ randomize = () ->
 	
 randomize()
 
-document.getElementsByTagName('body')[0].onclick = randomize
+document.getElementsByTagName('html')[0].onclick = randomize
